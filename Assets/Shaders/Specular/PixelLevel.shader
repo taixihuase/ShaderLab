@@ -35,7 +35,7 @@
 				v2f vert(a2v i) {
 					v2f o;
 					o.pos = UnityObjectToClipPos(i.vertex);
-					o.worldPos = UnityObjectToWorldDir(i.vertex);
+					o.worldPos = UnityObjectToWorldDir(i.vertex.xyz);
 					o.worldNormal = UnityObjectToWorldNormal(i.normal);
 					o.vertex = i.vertex;
 					return o;

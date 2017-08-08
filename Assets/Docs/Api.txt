@@ -1,0 +1,9 @@
+将模型空间的顶点位置转换到裁剪空间，等同于 mul(UNITY_MATRIX_MVP, objPos)
+float4 UnityObjectToClipPos(float4 objPos)
+
+将模型空间的法线向量转换到世界空间，等同于 mul(objNormal, (float3x3)unity_World2Object)
+float3 UnityObjectToWorldNormal(float3 objNormal)
+
+将模型空间的方向向量转换到世界空间，等同于 mul((float3x3)unity_Object2World, objDir)
+float3 UnityObjectToWorldDir(float3 objDir)
+
