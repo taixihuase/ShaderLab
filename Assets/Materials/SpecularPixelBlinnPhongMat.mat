@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: SpecularPixelLevelMat
-  m_Shader: {fileID: 4800000, guid: 0166af68f96fb3c4487718b7887af39b, type: 3}
+  m_Name: SpecularPixelBlinnPhongMat
+  m_Shader: {fileID: 4800000, guid: 479b4be8f2b4fd843af5f45bf02766e1, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
