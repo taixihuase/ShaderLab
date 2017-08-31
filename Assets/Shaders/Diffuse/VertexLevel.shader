@@ -1,4 +1,4 @@
-﻿Shader "MyShader/Diffuse/VertexLevel" {
+﻿Shader "Custom/Diffuse/VertexLevel" {
 	Properties {
 		_Diffuse("Diffuse", Color) = (1,1,1,1)
 	}

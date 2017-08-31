@@ -1,4 +1,4 @@
-﻿Shader "MyShader/Specular/VertexLevel" {
+﻿Shader "Custom/Specular/VertexLevel" {
 	Properties{
 		_Diffuse("Diffuse", Color) = (1,1,1,1)
 		_Specular("Specular", Color) = (1,1,1,1)
@@ -16,8 +16,8 @@
 				#include "UnityCG.cginc"
 				#include "Lighting.cginc"
 
-				float3 _Diffuse;
-				float3 _Specular;
+				fixed4 _Diffuse;
+				fixed4 _Specular;
 				float _Gloss;
 
 				struct a2v {

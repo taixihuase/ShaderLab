@@ -1,4 +1,4 @@
-﻿Shader "MyShader/Specular/PixelBlinnPhong" {
+﻿Shader "Custom/Specular/PixelBlinnPhong" {
 	Properties{
 		_Diffuse("Diffuse", Color) = (1,1,1,1)
 		_Specular("Specular", Color) = (1,1,1,1)
@@ -16,8 +16,8 @@
 				#include "UnityCG.cginc"
 				#include "Lighting.cginc"
 
-				fixed3 _Diffuse;
-				fixed3 _Specular;
+				fixed4 _Diffuse;
+				fixed4 _Specular;
 				float _Gloss;
 
 				struct a2v {
