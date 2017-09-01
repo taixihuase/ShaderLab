@@ -18,3 +18,9 @@ float3 WorldSpaceViewDir(float4 objPos)
 
 输入一个模型空间的顶点位置，获取模型空间中该点的观察方向
 float3 ObjectSpaceViewDir(float4 objPos)
+
+宏定义，输入一组纹理坐标和纹理属性，获得变换后的纹理坐标
+#define TRANSFORM_TEX(tex,name) (tex.xy * name##_ST.xy + name##_ST.zw)
+
+宏定义，获得从模型空间转换到切线空间的变换矩阵 rotation, 调用该宏的函数必须使用名为 v 且包含 normal 和 tangent 变量的参数
+TANGENT_SPACE_ROTATION
