@@ -24,3 +24,6 @@ float3 ObjectSpaceViewDir(float4 objPos)
 
 宏定义，获得从模型空间转换到切线空间的变换矩阵 rotation, 调用该宏的函数必须使用名为 v 且包含 normal 和 tangent 变量的参数
 TANGENT_SPACE_ROTATION
+
+输入一个法线纹理的纹素值，获得对法线纹理采样后的法线
+fixed3 UnpackNormal(fixed4 packedNormal)
