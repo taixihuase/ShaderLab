@@ -1,4 +1,4 @@
-﻿Shader "Custom/Diffuse/PixelHalfLambert" {
+﻿Shader "Custom/Diffuse/Pixel HalfLambert" {
 	Properties {
 		_Diffuse("Diffuse", Color) = (1,1,1,1)
 	}

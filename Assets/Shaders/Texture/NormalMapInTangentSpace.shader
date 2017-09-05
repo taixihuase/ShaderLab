@@ -1,4 +1,4 @@
-﻿Shader "Custom/Texture/NormalMapInTangentSpace" {
+﻿Shader "Custom/Texture/Normal Map In Tangent Space" {
 	Properties{
 		_Color("Color", Color) = (1,1,1,1)
 		_MainTex("Main Tex", 2D) = "white" {}

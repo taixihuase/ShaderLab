@@ -1,4 +1,4 @@
-﻿Shader "Custom/Diffuse/PixelLevel" {
+﻿Shader "Custom/Diffuse/Pixel Level" {
 	Properties {
 		_Diffuse("Diffuse", Color) = (1,1,1,1)
 	}

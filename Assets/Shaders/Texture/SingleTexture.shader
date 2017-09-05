@@ -1,4 +1,4 @@
-﻿Shader "Custom/Texture/SingleTexture" {
+﻿Shader "Custom/Texture/Single Texture" {
 	Properties {
 		_Color ("Color", Color) = (1,1,1,1)
 		_MainTex ("Main Tex", 2D) = "white" {}

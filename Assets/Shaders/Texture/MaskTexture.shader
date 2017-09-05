@@ -1,4 +1,4 @@
-﻿Shader "Custom/Texture/MaskTexture" {
+﻿Shader "Custom/Texture/Mask Texture" {
 	Properties{
 		_Color("Color", Color) = (1,1,1,1)
 		_MainTex("Main Tex", 2D) = "white" {}

@@ -1,4 +1,4 @@
-﻿Shader "Custom/Texture/RampTexture" {
+﻿Shader "Custom/Texture/Ramp Texture" {
 	Properties {
 		_Color ("Color", Color) = (1,1,1,1)
 		_RampTex ("Ramp Tex", 2D) = "white" {}

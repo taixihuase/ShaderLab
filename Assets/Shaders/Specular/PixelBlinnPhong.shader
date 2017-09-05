@@ -1,4 +1,4 @@
-﻿Shader "Custom/Specular/PixelBlinnPhong" {
+﻿Shader "Custom/Specular/Pixel BlinnPhong" {
 	Properties{
 		_Diffuse("Diffuse", Color) = (1,1,1,1)
 		_Specular("Specular", Color) = (1,1,1,1)

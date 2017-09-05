@@ -1,4 +1,4 @@
-﻿Shader "Custom/Specular/VertexLevel" {
+﻿Shader "Custom/Specular/Vertex Level" {
 	Properties{
 		_Diffuse("Diffuse", Color) = (1,1,1,1)
 		_Specular("Specular", Color) = (1,1,1,1)
