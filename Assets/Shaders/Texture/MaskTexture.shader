@@ -66,7 +66,7 @@
 						fixed3 diffuse = _LightColor0.rgb * albedo * (0.5 + 0.5*dot(tangentNormal, i.tangentLightDir));
 						fixed specularMask = tex2D(_SpecularMask, i.uv).r * _SpecularScale;
 						fixed3 halfDir = normalize(i.tangentLightDir + i.tangentViewDir);
-						fixed3 specular = _LightColor0.rgb * _Specular.rgb * _SpecularScale * pow(0.5 + 0.5*dot(halfDir, tangentNormal), _Gloss);
+						fixed3 specular = _LightColor0.rgb * _Specular.rgb * specularMask * pow(0.5 + 0.5*dot(halfDir, tangentNormal), _Gloss);
 						
 						return fixed4(ambient + diffuse + specular, 1.0);
 					}

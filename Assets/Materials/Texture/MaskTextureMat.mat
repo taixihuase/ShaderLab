@@ -35,7 +35,7 @@ Material:
     - _Gloss: 20
     - _Glossiness: 0.5
     - _Metallic: 0
-    - _SpecularScale: 5
+    - _SpecularScale: 1
     m_Colors:
     - _Color: {r: 0.5294118, g: 0.18431373, b: 0, a: 1}
     - _Specular: {r: 0.5294118, g: 0.18431373, b: 0, a: 1}
