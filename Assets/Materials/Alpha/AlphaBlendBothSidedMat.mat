@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: AlphaBlendMat
-  m_Shader: {fileID: 4800000, guid: 4db1689c5ee307d45b0c5b6b8cf8ca4a, type: 3}
+  m_Name: AlphaBlendBothSidedMat
+  m_Shader: {fileID: 4800000, guid: 73c40df1aafb5974ebc23c2ae3c9202a, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0

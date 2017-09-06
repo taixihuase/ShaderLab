@@ -27,3 +27,19 @@ TANGENT_SPACE_ROTATION
 
 输入一个法线纹理的纹素值，获得对法线纹理采样后的法线
 fixed3 UnpackNormal(fixed4 packedNormal)
+
+开启或关闭深度缓存写入
+ZWrite On/Off
+
+设置颜色通道写入掩码，只写入 RGB 通道 | Alpha 通道 | 不写入 | RGBA 通道
+ColorMask RGB | A | 0 | RGBA...
+
+关闭混合
+Blend Off
+
+开启混合，设置混合因子、Alpha 通道混合因子
+Blend SrcFactor DstFactor
+Blend SrcFactor DstFactor, SrcFactorA DstFactorA
+
+剔除背面 | 正面 | 关闭剔除
+Cull Back | Front | Off
