@@ -222,9 +222,9 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 0.007352948, g: 0.014198734, b: 1, a: 1}
-  m_Intensity: 100
-  m_Range: 1.25
+  m_Color: {r: 1, g: 0.8482759, b: 0, a: 1}
+  m_Intensity: 10
+  m_Range: 10
   m_SpotAngle: 9
   m_CookieSize: 10
   m_Shadows:
@@ -274,7 +274,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1524754688
 GameObject:
@@ -343,7 +343,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1879660625
 GameObject:
@@ -372,7 +372,7 @@ Light:
   m_Type: 0
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_Intensity: 10
-  m_Range: 5
+  m_Range: 10
   m_SpotAngle: 45
   m_CookieSize: 10
   m_Shadows:
@@ -422,7 +422,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1894694253
 GameObject:
