@@ -30,7 +30,7 @@ float3 ObjectSpaceViewDir(float4 objPos)
 宏定义，输入一组纹理坐标和纹理属性，获得变换后的纹理坐标
 #define TRANSFORM_TEX(tex,name) (tex.xy * name##_ST.xy + name##_ST.zw)
 
-宏定义，获得从模型空间转换到切线空间的变换矩阵 rotation, 调用该宏的函数必须使用名为 v 且包含 normal 和 tangent 变量的参数
+宏定义，获得从模型空间转换到切线空间的变换矩阵 rotation, 调用该宏的着色器函数必须使用名为 v 且包含 normal 和 tangent 变量的参数
 TANGENT_SPACE_ROTATION
 
 输入一个法线纹理的纹素值，获得对法线纹理采样后的法线
@@ -51,3 +51,13 @@ Blend SrcFactor DstFactor, SrcFactorA DstFactorA
 
 剔除背面 | 正面 | 关闭剔除
 Cull Back | Front | Off
+
+LIGHTING_COORDS(idx1, idx2)
+用于片元结构体，定义名为 _LightCoord 语义为 TEXCOORD##idx1 的变量，定义名为 _ShadowCoord 语义为 TEXCOORD##idx2的变量
+
+TRANSFER_VERTEX_TO_FRAGMENT(v2f)
+用于顶点着色器，计算片元结构体中的衰减纹理，调用该宏的着色器函数必须使用名为 v 且包含 vertex 变量的参数
+
+UNITY_LIGHT_ATTENUATION(atten, v2f, worldPos)
+用于片元着色器，计算光照衰减，内置衰减变量 atten 作为计算结果, 第二参数为包含 _LightCoord 和 _ShadowCoord 变量的片元结构体
+
