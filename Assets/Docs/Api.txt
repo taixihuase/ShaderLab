@@ -53,11 +53,11 @@ Blend SrcFactor DstFactor, SrcFactorA DstFactorA
 Cull Back | Front | Off
 
 LIGHTING_COORDS(idx1, idx2)
-用于片元结构体，定义名为 _LightCoord 语义为 TEXCOORD##idx1 的变量，定义名为 _ShadowCoord 语义为 TEXCOORD##idx2的变量
+用于片元结构体，定义名为 _LightCoord 语义为 TEXCOORD##idx1 的光照纹理，定义名为 _ShadowCoord 语义为 TEXCOORD##idx2的阴影纹理，该宏内已包含宏 SHADOW_COORDS
 
 TRANSFER_VERTEX_TO_FRAGMENT(v2f)
-用于顶点着色器，计算片元结构体中的衰减纹理，调用该宏的着色器函数必须使用名为 v 且包含 vertex 变量的参数
+用于顶点着色器，计算片元结构体中的衰减纹理和阴影纹理，调用该宏的着色器函数必须使用名为 v 且包含 vertex 变量的参数，该宏内已包含宏 TRANSFER_SHADOW
 
 UNITY_LIGHT_ATTENUATION(atten, v2f, worldPos)
-用于片元着色器，计算光照衰减，内置衰减变量 atten 作为计算结果, 第二参数为包含 _LightCoord 和 _ShadowCoord 变量的片元结构体
+用于片元着色器，计算光照衰减和阴影，atten 作为计算结果返回, 第二参数为包含 _LightCoord 和 _ShadowCoord 变量的片元结构体
 

@@ -20,6 +20,7 @@
 					#pragma vertex vert
 					#pragma fragment frag
 					#include "Lighting.cginc"
+					#include "AutoLight.cginc"
 
 					fixed4 _Color;
 					sampler2D _MainTex;
@@ -47,6 +48,7 @@
 						fixed3 tangentViewDir : TEXCOORD2;
 						float2 uv : TEXCOORD3;
 						float4 uv2 : TEXCOORD4;
+						LIGHTING_COORDS(5, 6)
 					};
 
 					v2f vert(a2v v) {
@@ -61,6 +63,8 @@
 						o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
 						o.uv2.xy = TRANSFORM_TEX(v.texcoord, _BumpMap);
 						o.uv2.zw = TRANSFORM_TEX(v.texcoord, _SpecularMask);
+
+						TRANSFER_VERTEX_TO_FRAGMENT(o)
 						return o;
 					}
 
@@ -77,7 +81,8 @@
 						fixed3 halfDir = normalize(i.tangentLightDir + i.tangentViewDir);
 						fixed3 specular = _LightColor0.rgb * _Specular.rgb * specularMask * pow(0.5 + 0.5*dot(tangentNormal, halfDir), _Gloss);
 						
-						return fixed4(ambient + diffuse + specular, 1.0);
+						UNITY_LIGHT_ATTENUATION(atten, i, i.worldPos)
+						return fixed4(ambient + (diffuse + specular)*atten, 1.0);
 					}
 
 					ENDCG
