@@ -4,6 +4,15 @@ diffuse = _LightColor0.rgb * _Diffuse.rgb * (0.5 + 0.5*dot(worldNormal, worldLig
 Blinn-Phong 光照模型
 specular = _LightColor0.rgb * _Specular.rgb * pow(0.5 + 0.5*dot(worldNormal, normalize(worldLightDir + WorldSpaceViewDir(objPos))), _Gloss)
 
+Schlick 菲涅耳近似等式
+fresnel = _FresnelScale + (1 - _FresnelScale) * pow(1 - dot(worldView, worldNormal), 5)
+
+副法线
+worldBinormal = cross(worldNormal, worldTangent) * objTangent.w
+
+切线空间到世界空间矩阵
+Tangent2World = float3x3(worldTangent, worldBinormal, worldNormal)
+
 将模型空间的顶点位置转换到裁剪空间，等同于 mul(UNITY_MATRIX_MVP, objPos)
 float4 UnityObjectToClipPos(float4 objPos)
 
@@ -12,6 +21,9 @@ float3 UnityObjectToWorldNormal(float3 objNormal)
 
 将模型空间的方向向量转换到世界空间，等同于 mul((float3x3)unity_Object2World, objDir)
 float3 UnityObjectToWorldDir(float3 objDir)
+
+将模型空间的顶点位置转换到屏幕空间
+float4 ComputeGrabScreenPos (float4 objPos)
 
 输入一个世界空间的顶点位置，获取世界空间中该点到光源的光照方向
 float3 UnityWorldSpaceLightDir(float3 worldPos)
