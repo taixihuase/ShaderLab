@@ -30,14 +30,14 @@ float3 UnityWorldSpaceLightDir(float3 worldPos)
 输入一个模型空间的顶点位置，获取世界空间中该点到光源的光照方向
 float3 WorldSpaceLightDir(float4 objPos)
 输入一个模型空间的顶点位置，获取世界空间中该点到光源的光照方向
-float3 ObjectSpaceLightDir(float4 objPos)
+float3 ObjSpaceLightDir(float4 objPos)
 
 输入一个世界空间的顶点位置，获取世界空间中该点的观察方向
 float3 UnityWorldSpaceViewDir(float3 worldPos)
 输入一个模型空间的顶点位置，获取世界空间中该点的观察方向
 float3 WorldSpaceViewDir(float4 objPos)
 输入一个模型空间的顶点位置，获取模型空间中该点的观察方向
-float3 ObjectSpaceViewDir(float4 objPos)
+float3 ObjSpaceViewDir(float4 objPos)
 
 宏定义，输入一组纹理坐标和纹理属性，获得变换后的纹理坐标
 #define TRANSFORM_TEX(tex,name) (tex.xy * name##_ST.xy + name##_ST.zw)
